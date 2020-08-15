@@ -1,0 +1,21 @@
+:root {
+  /* Colors */
+  --tik-tok-red: #dd3956;
+  --theme-red: var(--tik-tok-red);
+
+  /* Dimensions */
+  --master-padding: 80px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', Arial;
+}
+
+
+@media only screen and (max-width: 800px) {
+  :root {
+    --master-padding: 20px;
+  }
+}

@@ -1,0 +1,22 @@
+@import '../base.css';
+
+:root {
+  --header-height: 10vh;
+}
+
+.header {
+  height: var(--header-height);
+  padding-left: var(--master-padding);
+  display: grid;
+  align-content: center;
+  justify-content: flex-start;
+  background-color: var(--theme-red);
+  color: white;
+  font-size: 28px;
+  font-weight: 900;
+}
+
+.header a {
+  color: white;
+  text-decoration: none;
+}

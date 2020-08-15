@@ -1,0 +1,99 @@
+@import '../base.css';
+
+@import '../component/header.css';
+@import '../component/footer.css';
+
+:root {
+  --hero-height: calc(100vh - var(--header-height) - 2vh);
+}
+
+.hero {
+  height: var(--hero-height);
+  padding: 0 var(--master-padding) 0 var(--master-padding);
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-rows: 1fr;
+  grid-auto-flow: column;
+  grid-column-gap: 40px;
+}
+
+.hero .intro-hook {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: left;
+}
+
+.hero .intro-hook h1 {
+  margin-bottom: 1rem;
+  font-size: 40px;
+}
+
+.hero .intro-hook p {
+  margin-top: 1rem;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+.hero .register-email {
+  display: grid;
+  justify-content: stretch;
+  align-content: center;
+  font-size: 22px;
+}
+
+.hero .register-email .form {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "input button";
+  grid-auto-flow: column;
+  justify-content: stretch;
+  grid-gap: 10px;
+}
+
+.hero .register-email input {
+  grid-area: "input";
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.hero .register-email button {
+  grid-area: "button";
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid var(--theme-red);
+  border-radius: 2px;
+  background-color: var(--theme-red);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.hero .register-email button:hover {
+  filter: brightness(110%);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 800px) {
+  .hero {
+    grid-auto-flow: row;
+    padding: 80px var(--master-padding) 0 var(--master-padding);
+    height: auto;
+  }
+
+  .hero .intro-hook {
+    grid-row: 1;
+  }
+
+  .hero .register-email {
+    grid-row: 2;
+  }
+
+  .hero .register-email .form {
+    grid-auto-flow: row;
+  }
+
+}
