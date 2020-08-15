@@ -12,7 +12,7 @@ window.onload = function(e) {
       body: email,
     })
     .then(function(result) {
-      console.log(result.json());
+      console.log(result.text());
     });
   };
 }
