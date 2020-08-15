@@ -1,3 +1,9 @@
 @import '../component/header.css';
 @import '../component/content-panel.css';
 @import '../component/footer.css';
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
