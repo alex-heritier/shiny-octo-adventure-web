@@ -3,16 +3,28 @@ window.onload = function(e) {
 
   registerButton.onclick = function() {
     const emailInput = document.querySelector('#register-input');
-    const email = emailInput.value;
-    console.log(email);
+    const params = `email=${emailInput.value}`;
 
     fetch("server/register_email.php", {
       method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({email: email}),
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: params,
+      mode: 'no-cors',
     })
-    .then(function(result) {
-      console.log(result.text());
+    .then(async function(resp) {
+      const result = await resp.json();
+      console.log(result);
+
+      const resultStatus = document.querySelector('.register-email .result');
+      if (result == 1) {
+        resultStatus.textContent = "Great, you'll receive an email soon!";
+        resultStatus.style = "color: green";
+      } else {
+        resultStatus.textContent = "Failed to register";
+        resultStatus.style = "color: red";
+      }
     });
   };
 }

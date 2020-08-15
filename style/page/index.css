@@ -77,6 +77,11 @@
   cursor: pointer;
 }
 
+.hero .register-email .result {
+  margin-top: 1rem;
+  margin-left: 6px;
+}
+
 @media only screen and (max-width: 800px) {
   .hero {
     grid-auto-flow: row;
