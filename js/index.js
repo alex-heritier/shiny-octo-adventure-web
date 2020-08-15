@@ -8,8 +8,8 @@ window.onload = function(e) {
 
     fetch("server/register_email.php", {
       method: 'POST',
-      headers: { "Content-Type": "text/plain" },
-      body: email,
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({email: email}),
     })
     .then(function(result) {
       console.log(result.text());
