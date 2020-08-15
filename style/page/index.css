@@ -35,6 +35,16 @@
   line-height: 28px;
 }
 
+.hero .intro-hook .play-store-download {
+  width: 200px;
+}
+
+.hero .intro-hook .play-store-download img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
 .hero .register-email {
   display: grid;
   justify-content: stretch;
