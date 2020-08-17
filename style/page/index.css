@@ -57,14 +57,12 @@
   margin-top: 1rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
-  grid-template-areas: "input button";
   grid-auto-flow: column;
   justify-content: stretch;
   grid-gap: 10px;
 }
 
 .hero .register-email input {
-  grid-area: "input";
   box-sizing: border-box;
   padding: 12px;
   border: 1px solid #ccc;
@@ -72,7 +70,6 @@
 }
 
 .hero .register-email button {
-  grid-area: "button";
   box-sizing: border-box;
   padding: 12px;
   border: 1px solid var(--theme-red);
@@ -111,5 +108,4 @@
   .hero .register-email .form {
     grid-auto-flow: row;
   }
-
 }
