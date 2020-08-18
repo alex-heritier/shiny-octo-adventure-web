@@ -2,6 +2,10 @@
 @import '../component/content-panel.css';
 @import '../component/footer.css';
 
+.content-panel h2 {
+  font-weight: normal;
+}
+
 .content-panel a {
   margin-top: 2rem;
   text-decoration: none;
